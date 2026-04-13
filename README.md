@@ -1,17 +1,17 @@
-# Smart Chatbot (LLM + Vector DB)
+# Production RAG System
 
-A simple RAG-based chatbot that answers questions using a custom knowledge base.
+A simple retrieval-augmented generation (RAG) system for answering questions from custom data.
 
-It uses a vector database for retrieval and an LLM for generating context-aware responses.
+It uses a vector database for retrieval and an LLM to generate context-aware responses.
 
 ---
 
 ## What it does
 
 - answers questions from your data (PDF / text / docs)  
-- retrieves relevant chunks using embeddings  
-- generates responses using an LLM  
-- reduces hallucination with retrieval  
+- retrieves relevant context using embeddings  
+- generates responses grounded in retrieved data  
+- reduces hallucination using RAG  
 
 ---
 
@@ -19,7 +19,7 @@ It uses a vector database for retrieval and an LLM for generating context-aware 
 
 1. Load and process documents  
 2. Convert text → embeddings  
-3. Store embeddings in vector DB  
+3. Store embeddings in vector DB (Qdrant)  
 4. Retrieve relevant context for a query  
 5. Pass context + query to LLM  
 6. Generate final response  
@@ -28,19 +28,15 @@ It uses a vector database for retrieval and an LLM for generating context-aware 
 
 ## Tech stack
 
-- Python  
-- LangChain  
-- Vector DB (Qdrant)  
-- HuggingFace
-- FastAPI (for API layer)  
+Python • LangChain • Qdrant • HuggingFace • FastAPI  
 
 ---
 
 ## Run locally
 
 ```bash
-git clone https://github.com/thekazisakib/Smart-Chatbot-LLM-VectorDB.git
-cd Smart-Chatbot-LLM-VectorDB
+git clone https://github.com/thekazisakib/production-rag-system.git
+cd production-rag-system
 
 pip install -r requirements.txt
 python app.py
