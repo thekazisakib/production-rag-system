@@ -30,8 +30,8 @@ It uses a vector database for retrieval and an LLM for generating context-aware 
 
 - Python  
 - LangChain  
-- Vector DB (Qdrant / ChromaDB)  
-- HuggingFace / OpenAI embeddings  
+- Vector DB (Qdrant)  
+- HuggingFace
 - FastAPI (for API layer)  
 
 ---
